@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p id="aulafuji"></p>
+        <script>
+          
+          var contador = 10;
+          var intervalo = 1000;
+     
+
+          function exibeData(){
+            if(contador>=0){
+                document.getElementById("aulafuji").innerHTML = contador;
+                contador --;
+            }else{
+                clearInterval(intervalo);
+            }
+          }
+
+          //setInterval(exibeData, 1000);
+          setInterval(() => {
+            exibeData();
+          }, intervalo);
+
+                      
+        </script>
+
+</body>
+</html>
